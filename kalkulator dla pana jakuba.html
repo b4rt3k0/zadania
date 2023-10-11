@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+
+
+    <style>
+        body
+{
+        background-image: url(bmw.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: scroll;
+        color: #ffffff;
+}
+#f1
+{
+    float: left;
+}
+#wynik
+{
+    
+    display: inline-block;
+    color: white;
+}
+#div1
+{
+    text-align: center;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 450px;
+}
+
+    </style>
+    <script>
+        
+        function oblicz()
+        {
+            
+            let a=document.getElementById('l1').value;
+
+            let w1=document.getElementById('w1').checked;
+            let w2=document.getElementById('w2').checked;
+            let w3=document.getElementById('w3').checked;
+            let w4=document.getElementById('w4').checked;
+
+
+            
+            
+            let c=document.getElementById('l2').value;
+
+
+            if(w1) {document.getElementById("wynik").innerHTML=+a+ +c;}
+            else if(w2) {document.getElementById("wynik").innerHTML=a-c;}
+            else if(w3) {document.getElementById("wynik").innerHTML=a/c;}
+            else if(w4) {document.getElementById("wynik").innerHTML=a*c;}
+
+
+        }
+        
+    </script>
+
+</head>
+<body>
+
+    <div id="div1">
+    <form>
+        <input type="number" id="l1" autofocus>
+    
+    
+        <input class="s1" type="radio" name="w" id="w1">+
+        <input class="s1" type="radio" name="w" id="w2">-
+        <input class="s1" type="radio" name="w" id="w3">/
+        <input class="s1" type="radio" name="w" id="w4">*
+        
+        <input type="number" id="l2">
+    
+        =
+    
+    
+        <h2 id="wynik">wynik</h2>
+    
+        <input type="button" value="kliknij :D" onclick="oblicz()">
+    
+    </form>
+    </div>
+
+
+
+    
+    
+</body>
+</html>
